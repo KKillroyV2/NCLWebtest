@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Bliinx</title>
@@ -8,7 +8,7 @@
 		<div class='bliinx-header'>
 			<img class='bliinx-header-title' onclick="openPage('bliinx-main-page')" src='assets/bliinx_logo.webp'>
 			<div class='bliinx-header-pages'>
-				<div id='login-page-text' class='bliinx-header-page'><a style="text-decoration:none" href="/web/PHPWork/index.php"> Login / Register </a></div>
+				<div id='login-page-text' class='bliinx-header-page'><a style="text-decoration:none" href="/web/index.html"> Logout </a></div>
 				<div class='bliinx-header-page' onclick="openPage('bliinx-why-page')">Why Bliinx</div>
 				<div class='bliinx-header-page' onclick="openPage('bliinx-product-page')">Our Product</div>
 				<div class='bliinx-header-page' onclick="openPage('bliinx-pricing-page')">Pricing</div>
@@ -221,7 +221,7 @@
 		}
 
 		// START TO DO
-		function registerUserToDB(){
+		function registerUserToDB(username, password){
 			let username = document.getElementById("register-username").value;
 			let password = document.getElementById("register-password").value;
 			// Execute your backend code to create a user with username and password above
@@ -229,7 +229,7 @@
 			return true;
 		}
 
-		function loginUserToDB(){
+		function loginUserToDB(username, password){
 			let username = document.getElementById("register-username").value;
 			let password = document.getElementById("register-password").value;
 			// Login the user if the username and password were succesfull

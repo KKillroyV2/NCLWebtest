@@ -1,11 +1,34 @@
-﻿<!DOCTYPE html>
-<html>
-	<head>
-		<title>Bliinx</title>
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div class='bliinx-header'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+<div class='bliinx-header'>
 			<img class='bliinx-header-title' onclick="openPage('bliinx-main-page')" src='assets/bliinx_logo.webp'>
 			<div class='bliinx-header-pages'>
 				<div id='login-page-text' class='bliinx-header-page'><a style="text-decoration:none" href="/web/PHPWork/index.php"> Login / Register </a></div>
@@ -14,145 +37,144 @@
 				<div class='bliinx-header-page' onclick="openPage('bliinx-pricing-page')">Pricing</div>
 				<div class='bliinx-header-page' onclick="openPage('bliinx-review-page')">Leave a Comment</div>
 			</div>
-		</div>
-
-		<div class='bliinx-body'>
-			<div class='bliinx-main-page' id='bliinx-main-page'>
-				<img class='bliinx-main-page-logo' src='assets/bliinx_logo.webp'>
-				<div class='bliinx-main-page-description'>
-					Get up to Speed on Business Relationships Without Leaving Your Inbox Unlock everyone’s business timeline. Bliinx syncs touchpoints and generates a 360° view of how you and your colleagues have interacted with contacts, projects or companies. Accessible in one click from your inbox and calendar.
-				</div>
-				<img class='bliinx-main-page-background' src='assets/background2.svg'>
-			</div>
-			<div class='bliinx-why-page' id='bliinx-login-register-page'>
-				<div class='bliinx-pricing-card-container'>
-
-					<div class='bliinx-login-card'>
-						<div class='bliinx-card-title'>Login</div>
-						<div class='bliinx-card-desc'>Please login using your username and<br>password</div>
-						<br>
-						
-						<div class='bliinx-card-subtitle'>Username</div>
-						<input id='signin-username' type='text' placeholder="john.doe@company.com" class='bliinx-card-input'>
-						
-						<div class='bliinx-card-subtitle'>Password</div>
-						<input id='signin-password' type='password' placeholder="Password" class='bliinx-card-input'>
-						<br>
-
-						<button class='bliinx-card-button' onclick="login()">Sign in</button>
+		</div>	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="post" action="signup.php">
+					<span class="login100-form-title p-b-26">
+						Sign Up
+					</span>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "First Name">
+						<input class="input100" type="text" name="firstname">
+						<span class="focus-input100" data-placeholder="First Name"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input" data-validate = "Last Name">
+						<input class="input100" type="text" name="lastname">
+						<span class="focus-input100" data-placeholder="Last Name"></span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
-					<div class='bliinx-register-card'>
-						<div class='bliinx-pricing-card-title'>Register</div>
-						<div class='bliinx-card-desc'>Please register using your username and<br>password</div>
-						<br>
-						
-						<div type='text' class='bliinx-card-subtitle'>Username</div>
-						<input id='register-username' type='text' placeholder="john.doe@company.com" class='bliinx-card-input'>
-						
-						<div type='text' class='bliinx-card-subtitle'>Password</div>
-						<input id='register-password' type='text' placeholder="Password" class='bliinx-card-input'>
-						
-						<div type='text' class='bliinx-card-subtitle'>Confirm Password</div>
-						<input id='register-password-confirm' type='text' placeholder="Confirm Password" class='bliinx-card-input'>
-						<br>
-
-						<button class='bliinx-card-button' onclick="register()">Register</button>
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
-				</div>
-				<img class='bliinx-why-page-background' src='assets/background1.svg'>
-			</div>
-			<div class='bliinx-why-page' id='bliinx-why-page'>
-				<div class='bliinx-why-container'>
-					<div class='bliinx-why-container-title'>1. Unlock everyone’s business timeline</div>
-					<div class='bliinx-why-container-description'>Bliinx syncs touchpoints and generates a 360° view of how you and your colleagues have interacted with contacts, projects or companies. Accessible in one click from your inbox and calendar.</div>
-					<div class='bliinx-why-container-title'>2. Master your relationships, no search or manual work required</div>
-					<div class='bliinx-why-container-description'>Bliinx automatically captures relationship data that can lead to more opportunities and makes it available without the need to search your inbox for hours.</div>
-					<div class='bliinx-why-container-title'>3. With Bliinx you can Unlock the wisdom from your network </div>
-					<div class='bliinx-why-container-description'>Who do we know at X? Who interacted with Y recently? Which meetings have we had with Z? Have we followed-up with this project? All of these answers, Accessible in one click, from your inbox and calendar</div>
-				</div>
-				<img class='bliinx-why-page-background' src='assets/background1.svg'>
-			</div>
-			<div class='bliinx-product-page' id='bliinx-product-page'>
-				<img class='bliinx-product-page-image' src='assets/product.svg'>
-				<div class='bliinx-product-page-title'>What makes Bliinx Bliinx?</div>
-				<div class='bliinx-product-page-description'>Bliinx works where you do. Nothing to learn. No added work. With Bliinx, clients can track how their teams are interacting with clients and prospects, without them having to manually log anything and create uneccessary work. Bliinx is designed from the ground up to be easy to use and even easier to customise to your specific business needs.</div>
-				<img class='bliinx-product-page-background' src='assets/background1.svg'>
-			</div>
-			<div class='bliinx-pricing-page' id='bliinx-pricing-page'>
-				<div class='bliinx-pricing-card-container'>
+					
+					
+					
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="gender">
+						<span class="focus-input100" data-placeholder="Gender"></span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="date" name="dob">
+						<span class="focus-input100"></span>
+					</div>
+					
+					
 
-					<div class='bliinx-pricing-card-1'>
-						<div class='bliinx-pricing-card-title'>Free</div>
-						<div class='bliinx-pricing-card-price'>$0</div>
-						<div class='bliinx-pricing-card-price-desc'>never charged until upgrade</div>
-						<div class='bliinx-pricing-card-try-button-1'>Create new team</div>
-						<ul class='bliinx-pricing-card-listing'>
-							<li>Search and browse 1K timelines</li>
-							<li>Insights section</li>
-							<li>Smart tags/notes</li>
-							<li>Free integrations with Office native apps and browser</li>
-						</ul>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Register
+							</button>
+						</div>
 					</div>
 
-					<div class='bliinx-pricing-card-2'>
-						<div class='bliinx-pricing-card-title'>Standard</div>
-						<div class='bliinx-pricing-card-price'>$8</div>
-						<div class='bliinx-pricing-card-price-desc'>per user per month, billed annually</div>
-						<div class='bliinx-pricing-card-try-button-2'>Try Standard</div>
-						<ul class='bliinx-pricing-card-listing'>
-							<li>Everything in Free and :</li>
-							<li>Integrated Admin panel</li>
-							<li>AI text analysis</li>
-							<li>Sync with Salesforce</li>
-							<li>Sync with Microsoft Dynamics</li>
-							<li>Free mobile integrations</li>
-							<li>Custom smart tags</li>
-							<li>Relationship statistics/reports</li>
-							<li>Priority 24/7 support</li>
-							<li>Multiple Bliinx environments for teams</li>
-							<li>Compliance exports guaranteed SLA</li>
-						</ul>
-					</div>
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Already Have an Account?
+						</span>
 
-					<div class='bliinx-pricing-card-3'>
-						<div class='bliinx-pricing-card-title'>Enterprise</div>
-						<div class='bliinx-pricing-card-price'>$32</div>
-						<div class='bliinx-pricing-card-price-desc'>per user per month, billed annually</div>
-						<div class='bliinx-pricing-card-try-button-3'>Contact us</div>
-						<ul class='bliinx-pricing-card-listing'>
-							<li>Everything in Standard and :</li>
-							<li>Federation across multiple teams with a unified team directory</li>
-							<li>Unified security, data retention and compliance policies across all federated teams</li>
-							<li>Organization-wide reporting, metrics & analytics</li>
-							<li>Consolidated billing & administration across teams</li>
-						</ul>
+						<a class="txt2" href="index.php">
+							Sign In
+						</a>
 					</div>
-				</div>
-				<img class='bliinx-pricing-page-background' src='assets/background1.svg'>
-			</div>
-			<div class='bliinx-review-page' id='bliinx-review-page'>
-				<div class='bliinx-review-creator'>
-					<div class='bliinx-review-creator-ratings'>
-						<div class='bliinx-review-creator-rating' onclick='clickRating(1)'><img class='bliinx-review-creator-image' id='unselected-1' src='assets/rate-1.png'><img class='bliinx-review-creator-image-selected' id='selected-1' src='assets/rate-1.png'></div>
-						<div class='bliinx-review-creator-rating' onclick='clickRating(2)'><img class='bliinx-review-creator-image' id='unselected-2' src='assets/rate-2.png'><img class='bliinx-review-creator-image-selected' id='selected-2' src='assets/rate-2.png'></div>
-						<div class='bliinx-review-creator-rating' onclick='clickRating(3)'><img class='bliinx-review-creator-image' id='unselected-3' src='assets/rate-3.png'><img class='bliinx-review-creator-image-selected' id='selected-3' src='assets/rate-3.png'></div>
-						<div class='bliinx-review-creator-rating' onclick='clickRating(4)'><img class='bliinx-review-creator-image' id='unselected-4' src='assets/rate-4.png'><img class='bliinx-review-creator-image-selected' id='selected-4' src='assets/rate-4.png'></div>
-						<div class='bliinx-review-creator-rating' onclick='clickRating(5)'><img class='bliinx-review-creator-image' id='unselected-5' src='assets/rate-5.png'><img class='bliinx-review-creator-image-selected' id='selected-5' src='assets/rate-5.png'></div>
-					</div>
-					<input class='bliinx-review-creator-title' id='review-title' placeholder="Review Title" oninput="titleUpdated()">
-					<textarea class='bliinx-review-creator-description' id='review-description' placeholder="Review" oninput="descriptionUpdated()"></textarea>
-					<div class='bliinx-review-creator-buttons'>
-						<button class='bliinx-review-creator-button' onclick='submitReview()'>Submit</button>
-					</div>
-				</div>
-				<div class='bliinx-reviews' id='bliinx-reviews'>
-				</div>
+				</form>
 			</div>
 		</div>
-	</body>
+	</div>
+	
 
-	<script>
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	
+	
+<?php
+
+if (isset($_POST['email']) && isset($_POST['pass'])) {
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "phpproject";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{	 
+	 $first_name = $_POST['firstname'];
+	 $last_name = $_POST['lastname'];
+	 $Email = $_POST['email'];
+     $Gender = $_POST['gender'];
+     $Pass = $_POST['pass'];
+	 $DOB = $_POST['dob'];	  
+	 $sql = "INSERT INTO `users`( `FirstName`, `LastName`, `Email`, `Password`, `Gender`, `DOB`) 
+VALUES ('$first_name', '$last_name', '$Email','$Pass','$Gender','$DOB')";  
+	 if (mysqli_query($conn, $sql)) {    
+		 {
+			 echo "<script> alert('Account Created Successfully.....!');  </script>";
+			 echo'<script> window.location="index.php"; </script> ';
+			   exit;
+		 }
+   } 
+   else 
+   {
+		echo "Error: " . $sql . "
+" . mysqli_error($conn);
+	 }
+	 mysqli_close($conn);
+}
+else
+{
+//  echo "Chechhhhhh !";
+}
+} 	
+?>
+
+<script>
 
 		var reviewList = [{
 			rating: 5,
@@ -221,7 +243,7 @@
 		}
 
 		// START TO DO
-		function registerUserToDB(){
+		function registerUserToDB(username, password){
 			let username = document.getElementById("register-username").value;
 			let password = document.getElementById("register-password").value;
 			// Execute your backend code to create a user with username and password above
@@ -229,7 +251,7 @@
 			return true;
 		}
 
-		function loginUserToDB(){
+		function loginUserToDB(username, password){
 			let username = document.getElementById("register-username").value;
 			let password = document.getElementById("register-password").value;
 			// Login the user if the username and password were succesfull
@@ -897,4 +919,5 @@
 		}
 
 	</style>
+</body>
 </html>
