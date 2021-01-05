@@ -1,0 +1,12 @@
+I currently have a simple HTML/CSS Website.
+
+
+I need a database (PHP Ideally) that allows users to
+
+- Register an account
+- Login
+- Logout
+- View specific pages only when logged in (Comments page in this example)
+- Administrator accounts
+
+I have more info on the project brief if needed. 

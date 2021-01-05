@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bliinx</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class='bliinx-header'>
+			<img class='bliinx-header-title' onclick="openPage('bliinx-main-page')" src='assets/bliinx_logo.webp'>
+			<div class='bliinx-header-pages'>
+				<div id='login-page-text' class='bliinx-header-page' onclick="clickOnLoginLogout('bliinx-login-register-page')">Login / Register</div>
+				<div class='bliinx-header-page' onclick="openPage('bliinx-why-page')">Why Bliinx</div>
+				<div class='bliinx-header-page' onclick="openPage('bliinx-product-page')">Our Product</div>
+				<div class='bliinx-header-page' onclick="openPage('bliinx-pricing-page')">Pricing</div>
+				<div id='bliinx-header-page-review' class='bliinx-header-page' onclick="openPage('bliinx-review-page')">Leave a Comment</div>
+			</div>
+		</div>
+
+		<div class='bliinx-body'>
+			<div class='bliinx-main-page' id='bliinx-main-page'>
+				<img class='bliinx-main-page-logo' src='assets/bliinx_logo.webp'>
+				<div class='bliinx-main-page-description'>
+					Get up to Speed on Business Relationships Without Leaving Your Inbox Unlock everyone’s business timeline. Bliinx syncs touchpoints and generates a 360° view of how you and your colleagues have interacted with contacts, projects or companies. Accessible in one click from your inbox and calendar.
+				</div>
+				<img class='bliinx-main-page-background' src='assets/background2.svg'>
+			</div>
+			<div class='bliinx-why-page' id='bliinx-login-register-page'>
+				<div class='bliinx-pricing-card-container'>
+
+					<div class='bliinx-login-card'>
+						<div class='bliinx-card-title'>Login</div>
+						<div class='bliinx-card-desc'>Please login using your username and<br>password</div>
+						<br>
+						
+						<div class='bliinx-card-subtitle'>Username</div>
+						<input id='signin-username' type='text' placeholder="john.doe@company.com" class='bliinx-card-input'>
+						
+						<div class='bliinx-card-subtitle'>Password</div>
+						<input id='signin-password' type='password' placeholder="Password" class='bliinx-card-input'>
+						<br>
+
+						<button class='bliinx-card-button' onclick="login()">Sign in</button>
+					</div>
+
+					<div class='bliinx-register-card'>
+						<div class='bliinx-pricing-card-title'>Register</div>
+						<div class='bliinx-card-desc'>Please register using your username and<br>password</div>
+						<br>
+						
+						<div type='text' class='bliinx-card-subtitle'>Username</div>
+						<input id='register-username' type='text' placeholder="john.doe@company.com" class='bliinx-card-input'>
+						
+						<div type='text' class='bliinx-card-subtitle'>Password</div>
+						<input id='register-password' type='text' placeholder="Password" class='bliinx-card-input'>
+						
+						<div type='text' class='bliinx-card-subtitle'>Confirm Password</div>
+						<input id='register-password-confirm' type='text' placeholder="Confirm Password" class='bliinx-card-input'>
+						<br>
+
+						<button class='bliinx-card-button' onclick="register()">Register</button>
+					</div>
+				</div>
+				<img class='bliinx-why-page-background' src='assets/background1.svg'>
+			</div>
+			<div class='bliinx-why-page' id='bliinx-why-page'>
+				<div class='bliinx-why-container'>
+					<div class='bliinx-why-container-title'>1. Unlock everyone’s business timeline</div>
+					<div class='bliinx-why-container-description'>Bliinx syncs touchpoints and generates a 360° view of how you and your colleagues have interacted with contacts, projects or companies. Accessible in one click from your inbox and calendar.</div>
+					<div class='bliinx-why-container-title'>2. Master your relationships, no search or manual work required</div>
+					<div class='bliinx-why-container-description'>Bliinx automatically captures relationship data that can lead to more opportunities and makes it available without the need to search your inbox for hours.</div>
+					<div class='bliinx-why-container-title'>3. With Bliinx you can Unlock the wisdom from your network </div>
+					<div class='bliinx-why-container-description'>Who do we know at X? Who interacted with Y recently? Which meetings have we had with Z? Have we followed-up with this project? All of these answers, Accessible in one click, from your inbox and calendar</div>
+				</div>
+				<img class='bliinx-why-page-background' src='assets/background1.svg'>
+			</div>
+			<div class='bliinx-product-page' id='bliinx-product-page'>
+				<img class='bliinx-product-page-image' src='assets/product.svg'>
+				<div class='bliinx-product-page-title'>What makes Bliinx Bliinx?</div>
+				<div class='bliinx-product-page-description'>Bliinx works where you do. Nothing to learn. No added work. With Bliinx, clients can track how their teams are interacting with clients and prospects, without them having to manually log anything and create uneccessary work. Bliinx is designed from the ground up to be easy to use and even easier to customise to your specific business needs.</div>
+				<img class='bliinx-product-page-background' src='assets/background1.svg'>
+			</div>
+			<div class='bliinx-pricing-page' id='bliinx-pricing-page'>
+				<div class='bliinx-pricing-card-container'>
+
+					<div class='bliinx-pricing-card-1'>
+						<div class='bliinx-pricing-card-title'>Free</div>
+						<div class='bliinx-pricing-card-price'>$0</div>
+						<div class='bliinx-pricing-card-price-desc'>never charged until upgrade</div>
+						<div class='bliinx-pricing-card-try-button-1'>Create new team</div>
+						<ul class='bliinx-pricing-card-listing'>
+							<li>Search and browse 1K timelines</li>
+							<li>Insights section</li>
+							<li>Smart tags/notes</li>
+							<li>Free integrations with Office native apps and browser</li>
+						</ul>
+					</div>
+
+					<div class='bliinx-pricing-card-2'>
+						<div class='bliinx-pricing-card-title'>Standard</div>
+						<div class='bliinx-pricing-card-price'>$8</div>
+						<div class='bliinx-pricing-card-price-desc'>per user per month, billed annually</div>
+						<div class='bliinx-pricing-card-try-button-2'>Try Standard</div>
+						<ul class='bliinx-pricing-card-listing'>
+							<li>Everything in Free and :</li>
+							<li>Integrated Admin panel</li>
+							<li>AI text analysis</li>
+							<li>Sync with Salesforce</li>
+							<li>Sync with Microsoft Dynamics</li>
+							<li>Free mobile integrations</li>
+							<li>Custom smart tags</li>
+							<li>Relationship statistics/reports</li>
+							<li>Priority 24/7 support</li>
+							<li>Multiple Bliinx environments for teams</li>
+							<li>Compliance exports guaranteed SLA</li>
+						</ul>
+					</div>
+
+					<div class='bliinx-pricing-card-3'>
+						<div class='bliinx-pricing-card-title'>Enterprise</div>
+						<div class='bliinx-pricing-card-price'>$32</div>
+						<div class='bliinx-pricing-card-price-desc'>per user per month, billed annually</div>
+						<div class='bliinx-pricing-card-try-button-3'>Contact us</div>
+						<ul class='bliinx-pricing-card-listing'>
+							<li>Everything in Standard and :</li>
+							<li>Federation across multiple teams with a unified team directory</li>
+							<li>Unified security, data retention and compliance policies across all federated teams</li>
+							<li>Organization-wide reporting, metrics & analytics</li>
+							<li>Consolidated billing & administration across teams</li>
+						</ul>
+					</div>
+				</div>
+				<img class='bliinx-pricing-page-background' src='assets/background1.svg'>
+			</div>
+			<div class='bliinx-review-page' id='bliinx-review-page'>
+				<div class='bliinx-review-creator'>
+					<div class='bliinx-review-creator-ratings'>
+						<div class='bliinx-review-creator-rating' onclick='clickRating(1)'><img class='bliinx-review-creator-image' id='unselected-1' src='assets/rate-1.png'><img class='bliinx-review-creator-image-selected' id='selected-1' src='assets/rate-1.png'></div>
+						<div class='bliinx-review-creator-rating' onclick='clickRating(2)'><img class='bliinx-review-creator-image' id='unselected-2' src='assets/rate-2.png'><img class='bliinx-review-creator-image-selected' id='selected-2' src='assets/rate-2.png'></div>
+						<div class='bliinx-review-creator-rating' onclick='clickRating(3)'><img class='bliinx-review-creator-image' id='unselected-3' src='assets/rate-3.png'><img class='bliinx-review-creator-image-selected' id='selected-3' src='assets/rate-3.png'></div>
+						<div class='bliinx-review-creator-rating' onclick='clickRating(4)'><img class='bliinx-review-creator-image' id='unselected-4' src='assets/rate-4.png'><img class='bliinx-review-creator-image-selected' id='selected-4' src='assets/rate-4.png'></div>
+						<div class='bliinx-review-creator-rating' onclick='clickRating(5)'><img class='bliinx-review-creator-image' id='unselected-5' src='assets/rate-5.png'><img class='bliinx-review-creator-image-selected' id='selected-5' src='assets/rate-5.png'></div>
+					</div>
+					<input class='bliinx-review-creator-title' id='review-title' placeholder="Review Title" oninput="titleUpdated()">
+					<textarea class='bliinx-review-creator-description' id='review-description' placeholder="Review" oninput="descriptionUpdated()"></textarea>
+					<div class='bliinx-review-creator-buttons'>
+						<button class='bliinx-review-creator-button' onclick='submitReview()'>Submit</button>
+					</div>
+				</div>
+				<div class='bliinx-reviews' id='bliinx-reviews'>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+
+		var reviewList = [{
+			rating: 5,
+			title: 'Incredible!!',
+			description: 'My company\'s efficiency near doubled since we added Bliinx to Outlook!',
+			timestamp: '2020/6/16 at 0:29'
+		},{
+			rating: 1,
+			title: 'Meh',
+			description: 'The app is good but I had too many crashes. FIX IT!',
+			timestamp: '2020/6/1 at 13:29'
+		},{
+			rating: 4,
+			title: 'Good for Team Cohesion',
+			description: 'Aside from the few crashes, the extension really helped our cohesion.',
+			timestamp: '2020/5/29 at 17:29'
+		}];
+
+		var createdComment = {
+			rating: 0,
+			title: '',
+			description: ''
+		}
+
+		var isUserLoggedIn = false;
+		var userData = {};
+
+		function clickOnLoginLogout(pageName){
+			// If logged in
+			if(isUserLoggedIn){
+				logout();
+			}else{
+				openPage('bliinx-login-register-page')
+			}
+		}
+
+		function login(){
+			let username = document.getElementById("signin-username").value;
+			let password = document.getElementById("signin-password").value;
+			// Ensure credentials are okay. If response is 200
+			isUserLoggedIn = true;
+			document.getElementById('bliinx-header-page-review').setAttribute("style","display:inline-block");
+			document.getElementById('login-page-text').innerHTML = 'Log Out';
+			openPage('bliinx-main-page');
+			alert('You succesfully logged in.');
+
+		}
+
+		function logout(){
+			console.log('logout')
+			isUserLoggedIn = false;
+			document.getElementById('bliinx-header-page-review').setAttribute("style","display:none");
+			alert('You are now logged out.');
+			document.getElementById('login-page-text').innerHTML = 'Login / Register';
+		}
+
+		function register(){
+			// If both passwords are the same
+			if(document.getElementById("register-password").value === document.getElementById("register-password-confirm").value){
+				let registerSuccesfull = registerUserToDB();
+				isUserLoggedIn = true;
+				document.getElementById('login-page-text').innerHTML = 'Log Out';
+				openPage('bliinx-main-page');
+				alert('You succesfully created your account.');
+			}else{
+				alert('Please enter two identical password.')
+			}
+		}
+
+		// START TO DO
+		function registerUserToDB(){
+			let registerUsername = document.getElementById("register-username").value;
+			let registerPassword = document.getElementById("register-password").value;
+			// Execute your backend code to create a user with username and password above
+			// Return true if the user could be created. Return false otherwise
+			return true;
+		}
+
+		function loginUserToDB(){
+			let loginUsername = document.getElementById("register-username").value;
+			let loginPassword = document.getElementById("register-password").value;
+			// Login the user if the username and password were succesfull
+			// Return true if succesfull, false otherwise
+			return true;
+		}
+		// END TO DO
+
+		function openPage(pageName){
+
+			// Hide all the pages
+			document.getElementById("bliinx-main-page").setAttribute("style","display:none");
+			document.getElementById("bliinx-login-register-page").setAttribute("style","display:none");
+			document.getElementById("bliinx-why-page").setAttribute("style","display:none");
+			document.getElementById("bliinx-product-page").setAttribute("style","display:none");
+			document.getElementById("bliinx-pricing-page").setAttribute("style","display:none");
+			document.getElementById("bliinx-review-page").setAttribute("style","display:none");
+
+			// Show the one called for
+			document.getElementById(pageName).setAttribute("style","display:inline-block");
+		}
+
+		function clickRating(rating){ // 1 to 5
+			createdComment.rating = rating;
+
+			// Hide all the pages
+			for(let i = 1 ; i < 6 ; i++){
+				if(i !== rating){
+					document.getElementById("unselected-" + i).setAttribute("style","display:inline-block");
+					document.getElementById("selected-" + i).setAttribute("style","display:none");
+				}else{
+					document.getElementById("unselected-" + i).setAttribute("style","display:none");
+					document.getElementById("selected-" + i).setAttribute("style","display:inline-block");
+				}
+			}
+		}
+
+		function titleUpdated(){
+			createdComment.title = document.getElementById("review-title").value;
+		}
+
+		function descriptionUpdated(){
+			createdComment.description = document.getElementById("review-description").value;
+		}
+
+		function submitReview(){
+
+			// Check if all data is present
+			if(createdComment.rating === 0){
+				alert('You need to select a rating (emoji) before submitting the review.');
+				return;
+			}else if(createdComment.title === ''){
+				alert('You need add a review title before submitting the review.');
+				return;
+			}else if(createdComment.description === ''){
+				alert('You need add a review before submitting the review.');
+				return;
+			}
+
+			// Add the date
+			var dateObj = new Date();
+			var minute = dateObj.getMinutes();
+			var hour = dateObj.getHours();
+			var month = dateObj.getUTCMonth() + 1; //months from 1-12
+			var day = dateObj.getUTCDate();
+			var year = dateObj.getUTCFullYear();
+
+			createdComment.timestamp = year + "/" + month + "/" + day + ' at ' + hour + ':' + minute;
+
+			// Add review to review list
+			reviewList.unshift(JSON.parse(JSON.stringify(createdComment)));
+			updateReviewList();
+
+			// Wipe current review
+			createdComment = {
+				rating: 0,
+				title: '',
+				description: ''
+			}
+
+			// Wipe UI Data
+			document.getElementById("review-title").value = '';
+			document.getElementById("review-description").value = '';
+			clickRating(0);
+		}
+
+		function updateReviewList(){
+			var reviewTemplateHTML = "<div class='bliinx-review'><div class='bliinx-review-emoji'><img class='bliinx-review-creator-image-selected' src='assets/rate-%rating%.png'></div><div class='bliinx-review-title'>%title%</div><div class='bliinx-review-description'>%description%</div><div class='bliinx-review-timestamp'>%timestamp%</div></div>";
+
+			var currentHTML = '';
+
+			for(let i = 0 ; i < reviewList.length ; i++){
+				var currentReview = reviewList[i];
+				var currentReviewHTML = reviewTemplateHTML.replace('%rating%',currentReview.rating).replace('%title%',currentReview.title).replace('%description%',currentReview.description).replace('%timestamp%',currentReview.timestamp);
+				currentHTML = currentHTML.concat(currentReviewHTML);
+			}
+
+			document.getElementById("bliinx-reviews").innerHTML = currentHTML;
+		}
+
+		// On openning
+		// Remove the review page button
+		document.getElementById('bliinx-header-page-review').setAttribute("style","display:none");
+		openPage("bliinx-main-page");
+		clickRating(0);
+		updateReviewList();
+	</script>
+
+	<style>
+
+	 :root {
+		 --Bliinx-Blue: #27B4FF;
+		 --Bliinx-Purple: #683A91;
+		 --Bliinx-Grey: #333;
+		 --Bliinx-Grey-Pale: #eee;
+	 }
+
+		*{
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+
+		html{
+			height: 100%;
+			width: 100%;
+		}
+
+		body{
+			position: relative;
+			margin: 0px;
+			height: 100%;
+		}
+
+		.bliinx-header{
+			position: relative;
+			display: inline-block;
+			height: 55px;
+			width: 100%;
+			background-color: var(--Bliinx-Grey-Pale);
+    	box-shadow: 0px 0px 8px 2px #000000;
+			z-index: 1;
+		}
+
+		.bliinx-header-title{
+			display: inline-block;
+			height: 45px;
+			color: white;
+			margin-top: 5px;
+			margin-left: 20px;
+			margin-right: 0px;
+			overflow: hidden;
+			cursor: pointer;
+		}
+
+		.bliinx-header-pages{
+			display: inline-block;
+			float: right;
+			height: 100%;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+
+		.bliinx-header-page{
+			position: relative;
+			display: inline-block;
+			top: calc(50% - 15px);
+			padding: 5px 10px;
+			border-radius: 20px;
+    	font-size: 16px;
+			margin-left: 20px;
+			color: var(--Bliinx-Grey);
+			background-image: linear-gradient(to bottom right, var(--Bliinx-Grey-Pale), var(--Bliinx-Grey-Pale));
+			cursor: pointer;
+		  -webkit-transition: 0.35s;
+		  -moz-transition: 0.35s;
+		  -ms-transition: 0.35s;
+		  -o-transition: 0.35s;
+		  transition: 0.35s;
+		}
+
+		.bliinx-header-page:hover{
+			background-image: linear-gradient(to bottom right, var(--Bliinx-Blue), var(--Bliinx-Purple));
+			color: white;
+		}
+
+		.bliinx-body{
+			display: inline-block;
+			position: relative;
+			height: calc(100% - 55px);
+			width: 100%;
+		}
+
+		.bliinx-main-page{
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+    	overflow: hidden;
+		}
+
+		.bliinx-why-page{
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+    		overflow: hidden;
+		}
+
+		.bliinx-product-page{
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+    		overflow: hidden;
+		}
+
+		.bliinx-pricing-page{
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+    	overflow: hidden;
+		}
+
+		.bliinx-pricing-card-container{
+			position: absolute;
+			left: 50%;
+			top: 40%;
+			width: 800px;
+			transform: translate(-50%, -50%);
+			display: inline-block;
+			text-align: center;
+			z-index: 100;
+		}
+
+		.bliinx-login-card{
+			width: 250px;
+			height: 290px;
+			display: inline-block;
+			float: center;
+			border: 1px solid rgba(6,6,6,0.2);
+			background-color: white;
+			text-align: center;
+			margin-right: 30px;
+			vertical-align: middle;
+		}
+
+		.bliinx-register-card{
+			width: 250px;
+			height: 350px;
+			display: inline-block;
+			float: center;
+			border: 1px solid rgba(6,6,6,0.2);
+			background-color: white;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.bliinx-card-title{
+			font-weight: bold;
+			font-size: 22px;
+			padding-top: 20px;
+		}
+
+		.bliinx-card-desc{
+			font-size: 12px;
+		}
+
+		.bliinx-card-input{
+			font-size: 12px;
+		}
+
+		.bliinx-card-button{
+			margin-top: 20px;
+			padding: 5px 10px;
+			border-radius: 20px;
+    		font-size: 12px;
+			color: white;
+			background-color: var(--Bliinx-Purple);
+			border: 0px;
+			cursor: pointer;
+		}
+
+		.bliinx-card-subtitle{
+			font-weight: bold;
+			font-size: 14px;
+			padding-top: 20px;
+		}
+
+		.bliinx-pricing-card-1{
+			width: 250px;
+			height: 400px;
+			display: inline-block;
+			float: left;
+			border: 1px solid rgba(6,6,6,0.2);
+			background-color: white;
+			text-align: center;
+		}
+
+		.bliinx-pricing-card-2{
+			width: 250px;
+			height: 400px;
+			display: inline-block;
+			border-top: 3px solid var(--Bliinx-Blue);
+			background-color: white;
+			-webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.34);
+			-moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.34);
+			box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.34);
+			text-align: center;
+		}
+
+		.bliinx-pricing-card-3{
+			width: 250px;
+			height: 400px;
+			display: inline-block;
+			float: right;
+			border: 1px solid rgba(6,6,6,0.2);
+			background-color: white;
+			text-align: center;
+		}
+
+		.bliinx-pricing-card-title{
+			font-weight: bold;
+			font-size: 22px;
+			padding-top: 20px;
+		}
+
+		.bliinx-pricing-card-price{
+			font-weight: bold;
+			font-size: 30px;
+			padding-top: 5px;
+		}
+
+		.bliinx-pricing-card-price-desc{
+			font-size: 12px;
+		}
+
+		.bliinx-pricing-card-try-button-1{
+			margin-top: 20px;
+			padding: 7px 20px;
+			background-color: #A0A0A0;
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 5px;
+			color: white;
+		}
+
+		.bliinx-pricing-card-try-button-2{
+			margin-top: 20px;
+			padding: 7px 20px;
+			background-color: var(--Bliinx-Blue);
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 5px;
+			color: white;
+		}
+
+		.bliinx-pricing-card-try-button-3{
+			margin-top: 20px;
+			padding: 7px 20px;
+			background-color: var(--Bliinx-Purple);
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 5px;
+			color: white;
+		}
+
+		.bliinx-pricing-card-listing{
+			font-size: 14px;
+			text-align: left;
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+			transform: translateX(-18px);
+		}
+
+		.bliinx-img-filler{
+	    min-width: 100%;
+	    min-height: 100%;
+	    position: relative;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+		}
+
+		.bliinx-review-page{
+			display: inline-block;
+    	overflow: scroll;
+			height: 100%;
+			width: 100%;
+			background-image: linear-gradient(to bottom right, var(--Bliinx-Blue), var(--Bliinx-Purple));
+		}
+
+		.bliinx-review-creator{
+			display: inline-block;
+			width: 50%;
+			background-color: var(--Bliinx-Grey-Pale);
+			margin-top: 60px;
+			position: relative;
+			left: 50%;
+			transform: translate(-50%);
+			border-radius: 20px;
+ 			box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+		}
+
+		.bliinx-review-creator-ratings{
+			text-align: center;
+			vertical-align: top;
+			display: inline-block;
+			height: 70px;
+			width: 100%;
+		}
+
+		.bliinx-review-creator-rating{
+			display: inline-block;
+			vertical-align: top;
+			height: 30px;
+			width: 30px;
+			margin-top: 20px;
+			margin-left: 5px;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+
+		.bliinx-review-creator-image{
+			display: block;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			filter: grayscale(100%);
+			height: 30px;
+			width: 30px;
+		  transition: 0.35s;
+		}
+
+		.bliinx-review-creator-image:hover{
+			display: block;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			filter: none;
+			height: 40px;
+			width: 40px;
+		}
+
+		.bliinx-review-creator-image-selected{
+			display: block;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 40px;
+			width: 40px;
+		}
+
+		.bliinx-review-creator-title{
+			width: calc(100% - 30px);
+			margin-left: 10px;
+			border-radius: 5px;
+			font-size: 16px;
+			border: 0px !important;
+			box-shadow: inset rgba(0,0,0,0.8) 0 0 4px;
+		}
+
+		.bliinx-review-creator-description{
+			resize: none;
+			height: 100px;
+			width: calc(100% - 30px);
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-size: 16px;
+			border: 0px !important;
+			box-shadow: inset rgba(0,0,0,0.8) 0 0 4px;
+		}
+
+		.bliinx-review-creator-buttons{
+			display: inline-block;
+			height: 50px;
+			width: 100%;
+		}
+
+		.bliinx-review-creator-button{
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 5px 15px;
+			border-radius: 10px;
+			border: 0px;
+			color: white;
+			background-image: linear-gradient(to bottom right, var(--Bliinx-Blue), var(--Bliinx-Purple));
+			font-weight: bold;
+			cursor: pointer;
+		  transition: 0.35s;
+		}
+
+		.bliinx-review-creator-button:hover{
+			transform: translate(-50%, -50%) scale(1.15);
+		}
+
+		.bliinx-reviews{
+			height: calc(100% - 325px);
+			width: 100%;
+			margin-bottom: 100px;
+		}
+
+		.bliinx-review{
+			display: block;
+			width: 50%;
+			background-image: linear-gradient(to bottom right, var(--Bliinx-Grey-Pale), var(--Bliinx-Grey-Pale));
+			margin-top: 30px;
+			position: relative;
+			left: 50%;
+			transform: translate(-50%);
+			border-radius: 20px;
+ 			box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+		}
+
+		.bliinx-review-emoji{
+			display: inline-block;
+			margin-top: 15px;
+			height: 30px;
+			width: 100%;
+		}
+
+		.bliinx-review-title{
+			text-align: center;
+			display: inline-block;
+			width: 100%;
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 15px;
+			color: var(--Bliinx-Grey);
+		}
+
+		.bliinx-review-description{
+			text-align: center;
+			display: inline-block;
+			width: 100%;
+			font-size: 16px;
+			margin-top: 10px;
+			color: var(--Bliinx-Grey);
+		}
+
+		.bliinx-review-timestamp{
+			text-align: right;
+			margin-right: 20px;
+			display: inline-block;
+			width: calc(100% - 20px);
+			font-size: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			color: var(--Bliinx-Grey);
+		}
+
+		/** BLIINX MAIN PAGE **/
+
+		.bliinx-main-page-background {
+		    min-width: 100%;
+		    top: 100%;
+		    position: relative;
+		    transform: translate(0%, -100%);
+		}
+
+		.bliinx-pricing-page-background {
+		    min-width: 200%;
+		    top: 100%;
+		    position: relative;
+				left: -100%;
+		    transform: translate(0%, -70%);
+		}
+
+		.bliinx-why-page-background {
+		    min-width: 200%;
+		    top: 100%;
+		    position: relative;
+				left: -100%;
+		    transform: translate(0%, -70%);
+		}
+
+		.bliinx-why-container{
+			display: inline-block;
+			position: absolute;
+			top: 20px;
+			height: 75%;
+			width: 100%;
+			z-index: 1;
+		}
+
+		.bliinx-why-container-title{
+			text-align: center;
+			margin-top: 30px;
+			display: inline-block;
+			width: 100%;
+			font-size: 17px;
+			font-weight: bold;
+		}
+
+		.bliinx-why-container-description{
+			text-align: center;
+			position: relative;
+			margin-top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80% !important;
+			max-width: 700px;
+			font-size: 14px;
+		}
+
+		.bliinx-product-page-background {
+		    min-width: 200%;
+		    top: 100%;
+		    position: relative;
+				left: 0%;
+		    transform: translate(0%, -70%);
+		}
+
+		.bliinx-product-page-image {
+			position: absolute;
+			left: 25%;
+			top: 40%;
+			transform: translate(-50%, -50%);
+			width: 40%;
+			z-index: 1;
+		}
+
+		.bliinx-product-page-text-container {
+			position: absolute;
+			left: 50%;
+			top: 25%;
+		}
+
+		.bliinx-product-page-title {
+			position: absolute;
+			left: 50%;
+			top: 35%;
+			font-size: 26px;
+			font-weight: bold;
+			transform: translateY(-100%);
+		}
+
+		.bliinx-product-page-description {
+			position: absolute;
+			left: 50%;
+			width: 45%;
+			top: 35%;
+			font-size: 20px;
+		}
+
+		.bliinx-main-page-logo {
+			position: absolute;
+			left: 50%;
+			top: 35%;
+			transform: translate(-50%, -100%);
+		}
+
+		.bliinx-main-page-description {
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			position: absolute;
+			width: 50%;
+			left: 50%;
+			top: 35%;
+			transform: translate(-50%, 15px);
+		}
+
+		.bliinx-header-page-review {
+			display: none;
+		}
+
+	</style>
+</html>
